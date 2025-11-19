@@ -1,0 +1,179 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: #0f0f0f;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+  letter-spacing: 1px;
+}
+
+#searchBar {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.cart-icon svg {
+  fill: #00d4ff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cart-icon svg:hover {
+  transform: scale(1.1);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 6rem 2rem 2rem; /* extra top padding for sticky nav */
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.2rem;
+  color: #00d4ff;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Modals */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: #111;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  color: #00d4ff;
+  margin-bottom: 1rem;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+.modal-content button {
+  background: #00d4ff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #00aacc;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #222;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
