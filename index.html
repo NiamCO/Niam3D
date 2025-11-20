@@ -1,118 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Niam3D</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niam3D - Premium 3D Printed Fidgets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/niam.png" type="image/png">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Niam3D</div>
-    <input type="text" id="searchBar" placeholder="Search products...">
-    <div class="cart-icon" onclick="openCart()">
-      <!-- Example SVG for cart -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
-        <path d="M7 4h-2l-1 2h2l1-2zm0 0h10l4 8h-14l-2-4h-2l2 4h-2l2 4h14l-4-8h-10z"/>
-      </svg>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Niam3D</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item cart-icon">
+                    <a href="#cart" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.4 5.2 16.4H17M17 16C16.4 16 16 16.4 16 17C16 17.6 16.4 18 17 18C17.6 18 18 17.6 18 17C18 16.4 17.6 16 17 16ZM9 17C9 17.6 8.6 18 8 18C7.4 18 7 17.6 7 17C7 16.4 7.4 16 8 16C8.6 16 9 16.4 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Premium 3D Printed Fidgets</h1>
+                <p>Engineered for focus. Crafted for comfort.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Niam3D</h2>
+                <div class="about-content">
+                    <p>Founded by Niam Nangalia and Landon Waller, Niam3D combines innovative 3D printing technology with thoughtful design to create the perfect fidget companions.</p>
+                    <div class="founders">
+                        <div class="founder">
+                            <h3>Niam Nangalia</h3>
+                            <p>Co-Founder & Designer</p>
+                        </div>
+                        <div class="founder">
+                            <h3>Landon Waller</h3>
+                            <p>Co-Founder & Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form class="contact-form" action="https://formsubmit.co/niam3d@outlook.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Niam3D</h3>
+                    <p>Premium 3D printed fidgets and custom creations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: niam3d@outlook.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Niam3D. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price">$<span id="modalPrice"></span></div>
+                    <button class="add-to-cart" data-product="">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- Product Grid -->
-  <main class="product-grid">
-    <div class="product-card" onclick="openProductModal('Infinity Cube','images/ifcb.png','$12','Classic foldable cube fidget')">
-      <img src="images/ifcb.png" alt="Infinity Cube">
-      <h3>Infinity Cube</h3>
-      <p>$12</p>
+    <!-- Custom Request Modal -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2>Request Your Custom Design</h2>
+                <form class="custom-form" action="https://formsubmit.co/niam3d@outlook.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Custom Design Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="design_name" placeholder="Design Name" required>
+                    <textarea name="description" placeholder="Describe your custom design in detail..." rows="6" required></textarea>
+                    <textarea name="specifications" placeholder="Any specific requirements or specifications..." rows="4"></textarea>
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div class="product-card" onclick="openProductModal('Spiral Fidget','images/sppa.png','$15','Smooth spiral passthrough fidget')">
-      <img src="images/sppa.png" alt="Spiral Fidget">
-      <h3>Spiral Fidget</h3>
-      <p>$15</p>
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically loaded -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                Total: $<span id="cartTotal">0.00</span>
+            </div>
+            <form class="checkout-form" action="https://formsubmit.co/niam3d@outlook.com" method="POST">
+                <input type="hidden" name="_subject" value="New Order - Niam3D">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="order_details" id="orderDetails">
+                <input type="text" name="customer_name" placeholder="Your Name" required>
+                <input type="email" name="customer_email" placeholder="Your Email" required>
+                <textarea name="shipping_address" placeholder="Shipping Address" required></textarea>
+                <button type="submit">Complete Order</button>
+            </form>
+        </div>
     </div>
 
-    <div class="product-card" onclick="openProductModal('Cone Fidget','images/copa.png','$15','Cone-shaped passthrough fidget')">
-      <img src="images/copa.png" alt="Cone Fidget">
-      <h3>Cone Fidget</h3>
-      <p>$15</p>
-    </div>
+    <!-- Overlay for modals -->
+    <div id="overlay" class="overlay"></div>
 
-    <div class="product-card" onclick="openProductModal('Shrektopus','images/shto.png','$20','Shrek-themed octopus fidget')">
-      <img src="images/shto.png" alt="Shrektopus">
-      <h3>Shrektopus</h3>
-      <p>$20</p>
-    </div>
-
-    <div class="product-card" onclick="openProductModal('Rocktopus','images/roto.png','$20','Rock-themed octopus fidget')">
-      <img src="images/roto.png" alt="Rocktopus">
-      <h3>Rocktopus</h3>
-      <p>$20</p>
-    </div>
-
-    <div class="product-card" onclick="openProductModal('Shrek Action Figure','images/shac.png','$25','Custom Shrek action figure')">
-      <img src="images/shac.png" alt="Shrek Action Figure">
-      <h3>Shrek Action Figure</h3>
-      <p>$25</p>
-    </div>
-
-    <!-- Request Your Own -->
-    <div class="product-card" onclick="openRequestModal()">
-      <img src="images/custom.png" alt="Request Your Own">
-      <h3>Request Your Own</h3>
-      <p>Custom Pricing</p>
-    </div>
-  </main>
-
-  <!-- Product Modal -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeProductModal()">&times;</span>
-      <h2 id="modalTitle">Product Title</h2>
-      <img id="modalImage" src="" alt="">
-      <p id="modalDescription">Product description goes here.</p>
-      <p id="modalPrice">$0</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
-  </div>
-
-  <!-- Request Modal -->
-  <div id="requestModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeRequestModal()">&times;</span>
-      <h2>Request Your Own Product</h2>
-      <form action="https://formsubmit.co/niam3d@outlook.com" method="POST">
-        <input type="hidden" name="_subject" value="Custom Product Request">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="requestDetails" placeholder="Describe your custom product idea..." required></textarea>
-        <button type="submit">Submit Request</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Cart Modal -->
-  <div id="cartModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeCart()">&times;</span>
-      <h2>Your Cart</h2>
-      <ul id="cartItems"></ul>
-      <form action="https://formsubmit.co/niam3d@outlook.com" method="POST">
-        <input type="hidden" name="_subject" value="New Order from Niam3D">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="orderDetails" id="orderDetails" readonly></textarea>
-        <button type="submit">Checkout</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>Founded by Niam Nangalia & Landon Waller</p>
-    <p>© 2025 Niam3D. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
